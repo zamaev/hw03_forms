@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 {% block title %}
-    {% if is_edit %}
-        Редактировать запись
-    {% else %}
-        Новая запись
-    {% endif %}
+	{% if is_edit %}
+		Редактировать запись
+	{% else %}
+		Новая запись
+	{% endif %}
 {% endblock %}
 {% block content %}
-    {% if is_edit %}
-        {% include 'includes/form.html' with header='Редактировать запись' button='Сохранить' %}
-    {% else %}
-        {% include 'includes/form.html' with header='Новая запись' button='Добавить' %}
-    {% endif %}
+	{% if is_edit %}
+		{% include 'includes/form.html' with
+			header='Редактировать запись' button='Сохранить' %}
+	{% else %}
+		{% include 'includes/form.html' with
+			header='Новая запись' button='Добавить' %}
+	{% endif %}
 {% endblock %}
