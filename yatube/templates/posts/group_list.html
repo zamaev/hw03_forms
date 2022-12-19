@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+  Записи сообщества {{ group.title }}
+{% endblock %}
+{% block content %}
+  <h1>{{ group.title }}</h1>
+  {{ group.description|linebreaks }}
+  {% include 'posts/includes/posts.html' with show_author=True %}
+{% endblock %}
