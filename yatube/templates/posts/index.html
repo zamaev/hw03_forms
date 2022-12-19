@@ -4,5 +4,8 @@
 {% endblock %}
 {% block content %}
   <h1>Последние обновления на сайте</h1>
-  {% include 'posts/includes/posts.html' with show_group_link=True show_author=True %}
+  {% for post in page_obj %}
+    {% include 'posts/includes/post.html' with show_group_link=True show_author=True %}
+  {% endfor %}
+  {% include 'posts/includes/paginator.html' %}
 {% endblock %}
