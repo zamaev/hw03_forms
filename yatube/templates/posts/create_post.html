@@ -8,10 +8,8 @@
 {% endblock %}
 {% block content %}
 	{% if is_edit %}
-		{% include 'includes/form.html' with
-			header='Редактировать запись' button='Сохранить' %}
+		{% include 'includes/form.html' with header='Редактировать запись' button='Сохранить' %}
 	{% else %}
-		{% include 'includes/form.html' with
-			header='Новая запись' button='Добавить' %}
+		{% include 'includes/form.html' with header='Новая запись' button='Добавить' %}
 	{% endif %}
 {% endblock %}
