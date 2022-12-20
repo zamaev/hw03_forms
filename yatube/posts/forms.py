@@ -7,10 +7,10 @@ class PostForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['text'].widget.attrs['placeholder'] = (
-            'Не забываем про вдохновение 💡'
+            'Не забываем про вдохновение 💡',
         )
         self.fields['group'].empty_label = (
-            'В группе легче искать чем в космосе 🌌'
+            'В группе легче искать чем в космосе 🌌',
         )
 
     class Meta:
