@@ -2,9 +2,9 @@
   <ul>
     {% if show_author %}
       <li>
-        Автор: {{ post.author.get_full_name }}
+        Автор: 
         <a href="{% url 'posts:profile' post.author.username %}">
-          все посты пользователя
+          {{ post.author.get_full_name }}
         </a>
       </li>
     {% endif %}

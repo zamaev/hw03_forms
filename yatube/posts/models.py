@@ -51,7 +51,7 @@ class Post(models.Model):
         on_delete=models.SET_NULL,
         related_name='posts',
         verbose_name='Группа',
-        help_text='Группа, к которой будет относиться пост',
+        help_text='Группа поста',
     )
 
     class Meta:
